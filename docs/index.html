@@ -11,12 +11,18 @@
       <div class="hero-content">
         <h1>Welcome to Learning C#</h1>
         <p>This website documents my journey in learning C# programming.</p>
-        <img src="images/csharp-logo.png" alt="C# Logo" class="intro-image" />
+        <img src="img/Cs-logo-001.png" alt="C# Logo" class="intro-image" />
       </div>
     </header>
 
     <nav class="navbar">
-      <ul>
+      <div class="navbar-brand">
+        <img src="path-to-your-logo.png" alt="Logo" class="logo" />
+      </div>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        &#9776;
+      </button>
+      <ul class="navbar-menu">
         <li><a href="#introduction">Introduction</a></li>
         <li><a href="basics.html">C# Basics</a></li>
         <li><a href="oop/index.html">OOP</a></li>
@@ -53,20 +59,23 @@
           <div class="card">
             <div class="card-inner">
               <div class="card-front">
-                <h3>Start with the Basics</h3>
+                <h3>C# Basics</h3>
               </div>
               <div class="card-back">
                 <p>
-                  If you're new to C#, begin with the
-                  <a href="basics.html">C# Basics</a> section.
+                  Start with the <a href="basics.html">Basics</a> section to get
+                  a good foundation.
                 </p>
+                <button onclick="window.location.href='basics.html'">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
           <div class="card">
             <div class="card-inner">
               <div class="card-front">
-                <h3>Move to OOP</h3>
+                <h3>Object-Oriented Programming</h3>
               </div>
               <div class="card-back">
                 <p>
@@ -74,6 +83,9 @@
                   <a href="oop/index.html">Object-Oriented Programming</a>
                   section once you're comfortable with the basics.
                 </p>
+                <button onclick="window.location.href='oop/index.html'">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
@@ -88,6 +100,11 @@
                   <a href="data_structures/index.html">Data Structures</a> and
                   <a href="algorithms.html">Algorithms</a> sections.
                 </p>
+                <button
+                  onclick="window.location.href='data_structures/index.html'"
+                >
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
@@ -101,6 +118,9 @@
                   Apply what you've learned in the
                   <a href="projects/index.html">Projects</a> section.
                 </p>
+                <button onclick="window.location.href='projects/index.html'">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
@@ -114,6 +134,9 @@
                   Check the <a href="#resources">Resources</a> section for
                   further learning materials.
                 </p>
+                <button onclick="window.location.href='#resources'">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
@@ -126,7 +149,7 @@
         <h2>Prerequisites</h2>
         <div class="prerequisites-container">
           <div class="prerequisite-item">
-            <img src="images/dotnet-icon.png" alt=".NET SDK" />
+            <img src="img/Microsoft_.NET_logo.svg" alt=".NET SDK" />
             <h3>.NET SDK</h3>
             <p>
               Install the latest version from the
@@ -136,7 +159,7 @@
             </p>
           </div>
           <div class="prerequisite-item">
-            <img src="images/visualstudio-icon.png" alt="Visual Studio" />
+            <img src="img/Visual_Studio_Logo.svg" alt="Visual Studio" />
             <h3>Visual Studio</h3>
             <p>
               Download Visual Studio from the
@@ -147,7 +170,7 @@
             </p>
           </div>
           <div class="prerequisite-item">
-            <img src="images/git-icon.png" alt="Git" />
+            <img src="img/Git-Icon.png" alt="Git" />
             <h3>Git</h3>
             <p>
               Install Git from the
@@ -170,37 +193,25 @@
               href="https://learn.microsoft.com/en-us/dotnet/csharp/"
               target="_blank"
             >
-              <img src="images/microsoft-learn.png" alt="Microsoft Learn" />
+              <img src="img/microsoftLearn.png" alt="Microsoft Learn" />
               <p>Microsoft Learn C#</p>
             </a>
           </div>
           <div class="resource-item">
             <a href="http://www.robmiles.com/c-yellow-book/" target="_blank">
-              <img src="images/yellow-book.png" alt="C# Yellow Book" />
+              <img src="img/YellowBook.png" alt="C# Yellow Book" />
               <p>C# Programming Yellow Book by Rob Miles</p>
             </a>
           </div>
           <div class="resource-item">
-            <a
-              href="https://www.packtpub.com/product/c-10-and-net-6-modern-cross-platform-development/9781800568105"
-              target="_blank"
-            >
-              <img src="images/csharp-book.png" alt="C# Book" />
-              <p>
-                C# 10 and .NET 6 – Modern Cross-Platform Development by Mark J.
-                Price
-              </p>
-            </a>
-          </div>
-          <div class="resource-item">
             <a href="https://leetcode.com/" target="_blank">
-              <img src="images/leetcode.png" alt="LeetCode" />
+              <img src="img/leetCode-logo.jpg" alt="LeetCode" />
               <p>LeetCode for C# Practice</p>
             </a>
           </div>
           <div class="resource-item">
             <a href="https://www.codewars.com/" target="_blank">
-              <img src="images/codewars.png" alt="Codewars" />
+              <img src="img/codeWars-logo.png" alt="Codewars" />
               <p>Codewars for C# Challenges</p>
             </a>
           </div>
@@ -211,5 +222,13 @@
     <footer>
       <p>&copy; 2024 TheCelestialMarauder. All rights reserved.</p>
     </footer>
+
+    <script>
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".navbar").classList.toggle("active");
+        });
+    </script>
   </body>
 </html>
