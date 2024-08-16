@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,69 +7,204 @@ body {
   color: #333;
 }
 
-header {
+/* scroll bar */
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #333333c2;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   background-color: #333;
   color: #fff;
-  padding: 1rem;
+}
+
+.hero-content {
   text-align: center;
 }
 
-header h1 {
+.hero h1 {
+  font-size: 3rem;
   margin: 0;
 }
 
-nav {
-  background-color: #444;
-  padding: 0.5rem;
-  text-align: center;
+.hero p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0;
 }
 
-nav ul {
+.intro-image {
+  margin-top: 1rem;
+  width: 150px;
+  height: auto;
+}
+
+/* Floating Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  z-index: 100;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+.navbar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  gap: 1rem;
 }
 
-nav ul li {
+.navbar ul li {
   display: inline;
-  margin: 0 10px;
 }
 
-nav ul li a {
+.navbar ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
 }
 
-nav ul li a:hover {
+.navbar ul li a:hover {
   background-color: #555;
 }
 
+/* Main Content */
 main {
   padding: 2rem;
   background-color: #fff;
   margin: 1rem auto;
   max-width: 800px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 5rem;
 }
 
-section {
-  margin-bottom: 2rem;
+/* Section Separator */
+.separator {
+  height: 2px;
+  background-color: #333;
+  margin: 2rem 0;
 }
 
-section h2 {
-  margin-top: 0;
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
+.card {
+  width: 200px;
+  height: 300px;
+  margin: 1rem;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.card-front {
+  background-color: #333;
+  color: #fff;
+}
+
+.card-back {
+  background-color: #fff;
+  color: #333;
+  transform: rotateY(180deg);
+}
+
+/* Prerequisites Section */
+.prerequisites-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.prerequisite-item {
+  text-align: center;
+  width: 200px;
+}
+
+.prerequisite-item img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.prerequisite-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Resources Section */
+.resource-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.resource-item {
+  text-align: center;
+  width: 200px;
+}
+
+.resource-item img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
   background-color: #333;
   color: #fff;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: none;
+  margin-top: 2rem;
+  position: relative;
+  bottom: 0;
 }

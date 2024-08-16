@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <header>
-      <h1>Welcome to Learning C#</h1>
-      <p>
-        This website is dedicated to documenting my journey in learning C#
-        programming.
-      </p>
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Learning C#</h1>
+        <p>This website documents my journey in learning C# programming.</p>
+        <img src="images/csharp-logo.png" alt="C# Logo" class="intro-image" />
+      </div>
     </header>
 
-    <nav>
+    <nav class="navbar">
       <ul>
         <li><a href="#introduction">Introduction</a></li>
         <li><a href="basics.html">C# Basics</a></li>
-        <li><a href="oop/index.html">Object-Oriented Programming (OOP)</a></li>
+        <li><a href="oop/index.html">OOP</a></li>
         <li><a href="data_structures/index.html">Data Structures</a></li>
         <li><a href="algorithms.html">Algorithms</a></li>
         <li><a href="linq.html">LINQ</a></li>
@@ -45,118 +45,166 @@
         </p>
       </section>
 
+      <div class="separator"></div>
+
       <section id="how-to-use">
         <h2>How to Use This Site</h2>
-        <ol>
-          <li>
-            Start with the Basics: If you're new to C#, begin with the
-            <a href="basics.html">C# Basics</a> section.
-          </li>
-          <li>
-            Move to OOP: Explore the
-            <a href="oop/index.html">Object-Oriented Programming</a> section
-            once you're comfortable with the basics.
-          </li>
-          <li>
-            Explore Data Structures and Algorithms: Visit the
-            <a href="data_structures/index.html">Data Structures</a> and
-            <a href="algorithms.html">Algorithms</a> sections.
-          </li>
-          <li>
-            Practice with Projects: Apply what you've learned in the
-            <a href="projects/index.html">Projects</a> section.
-          </li>
-          <li>
-            Utilize Resources: Check the
-            <a href="#resources">Resources</a> section for further learning
-            materials.
-          </li>
-        </ol>
+        <div class="card-container">
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h3>Start with the Basics</h3>
+              </div>
+              <div class="card-back">
+                <p>
+                  If you're new to C#, begin with the
+                  <a href="basics.html">C# Basics</a> section.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h3>Move to OOP</h3>
+              </div>
+              <div class="card-back">
+                <p>
+                  Explore the
+                  <a href="oop/index.html">Object-Oriented Programming</a>
+                  section once you're comfortable with the basics.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h3>Data Structures and Algorithms</h3>
+              </div>
+              <div class="card-back">
+                <p>
+                  Visit the
+                  <a href="data_structures/index.html">Data Structures</a> and
+                  <a href="algorithms.html">Algorithms</a> sections.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h3>Practice with Projects</h3>
+              </div>
+              <div class="card-back">
+                <p>
+                  Apply what you've learned in the
+                  <a href="projects/index.html">Projects</a> section.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h3>Utilize Resources</h3>
+              </div>
+              <div class="card-back">
+                <p>
+                  Check the <a href="#resources">Resources</a> section for
+                  further learning materials.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+
+      <div class="separator"></div>
 
       <section id="prerequisites">
         <h2>Prerequisites</h2>
-        <p>
-          To start working with C#, you'll need to have the following tools and
-          environment set up:
-        </p>
-        <ol>
-          <li>
-            <strong>.NET SDK</strong>
-            <ul>
-              <li>
-                Install the latest version of the .NET SDK from the official
-                <a href="https://dotnet.microsoft.com/download" target="_blank"
-                  >Microsoft .NET website</a
-                >.
-              </li>
-              <li>
-                Verify the installation by running the following command in your
-                terminal:
-                <pre><code>dotnet --version</code></pre>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <strong>Visual Studio</strong>
-            <ul>
-              <li>
-                Download and install Visual Studio from the official
-                <a href="https://visualstudio.microsoft.com/" target="_blank"
-                  >Visual Studio website</a
-                >.
-              </li>
-              <li>
-                During the installation, select the
-                <strong>.NET desktop development</strong> workload to get all
-                the necessary tools for C# development.
-              </li>
-            </ul>
-          </li>
-          <li>
-            <strong>Git</strong>
-            <ul>
-              <li>
-                Make sure Git is installed to clone this repository. You can
-                download it from the
-                <a href="https://git-scm.com/" target="_blank"
-                  >official Git website</a
-                >.
-              </li>
-              <li>
-                Verify the installation by running the following command:
-                <pre><code>git --version</code></pre>
-              </li>
-            </ul>
-          </li>
-        </ol>
+        <div class="prerequisites-container">
+          <div class="prerequisite-item">
+            <img src="images/dotnet-icon.png" alt=".NET SDK" />
+            <h3>.NET SDK</h3>
+            <p>
+              Install the latest version from the
+              <a href="https://dotnet.microsoft.com/download" target="_blank"
+                >Microsoft .NET website</a
+              >.
+            </p>
+          </div>
+          <div class="prerequisite-item">
+            <img src="images/visualstudio-icon.png" alt="Visual Studio" />
+            <h3>Visual Studio</h3>
+            <p>
+              Download Visual Studio from the
+              <a href="https://visualstudio.microsoft.com/" target="_blank"
+                >official website</a
+              >
+              and select the .NET desktop development workload.
+            </p>
+          </div>
+          <div class="prerequisite-item">
+            <img src="images/git-icon.png" alt="Git" />
+            <h3>Git</h3>
+            <p>
+              Install Git from the
+              <a href="https://git-scm.com/" target="_blank"
+                >official Git website</a
+              >
+              and verify it with <code>git --version</code>.
+            </p>
+          </div>
+        </div>
       </section>
+
+      <div class="separator"></div>
 
       <section id="resources">
         <h2>Resources</h2>
-        <ul>
-          <li>
-            <a href="https://learn.microsoft.com/en-us/dotnet/csharp/"
-              >Microsoft Learn C#</a
+        <div class="resource-list">
+          <div class="resource-item">
+            <a
+              href="https://learn.microsoft.com/en-us/dotnet/csharp/"
+              target="_blank"
             >
-          </li>
-          <li>
-            <a href="http://www.robmiles.com/c-yellow-book/"
-              >C# Programming Yellow Book by Rob Miles</a
-            >
-          </li>
-          <li>
+              <img src="images/microsoft-learn.png" alt="Microsoft Learn" />
+              <p>Microsoft Learn C#</p>
+            </a>
+          </div>
+          <div class="resource-item">
+            <a href="http://www.robmiles.com/c-yellow-book/" target="_blank">
+              <img src="images/yellow-book.png" alt="C# Yellow Book" />
+              <p>C# Programming Yellow Book by Rob Miles</p>
+            </a>
+          </div>
+          <div class="resource-item">
             <a
               href="https://www.packtpub.com/product/c-10-and-net-6-modern-cross-platform-development/9781800568105"
-              >C# 10 and .NET 6 – Modern Cross-Platform Development by Mark J.
-              Price</a
+              target="_blank"
             >
-          </li>
-          <li><a href="https://leetcode.com/">LeetCode for C# Practice</a></li>
-          <li>
-            <a href="https://www.codewars.com/">Codewars for C# Challenges</a>
-          </li>
-        </ul>
+              <img src="images/csharp-book.png" alt="C# Book" />
+              <p>
+                C# 10 and .NET 6 – Modern Cross-Platform Development by Mark J.
+                Price
+              </p>
+            </a>
+          </div>
+          <div class="resource-item">
+            <a href="https://leetcode.com/" target="_blank">
+              <img src="images/leetcode.png" alt="LeetCode" />
+              <p>LeetCode for C# Practice</p>
+            </a>
+          </div>
+          <div class="resource-item">
+            <a href="https://www.codewars.com/" target="_blank">
+              <img src="images/codewars.png" alt="Codewars" />
+              <p>Codewars for C# Challenges</p>
+            </a>
+          </div>
+        </div>
       </section>
     </main>
 
