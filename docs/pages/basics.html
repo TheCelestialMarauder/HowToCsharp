@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of C#</title>
+    <link rel="stylesheet" href="../css/basics.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+          <img src="path-to-your-logo.png" alt="Logo" class="logo" />
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+        <ul class="navbar-menu">
+          <li><a href="oop/index.html">OOP</a></li>
+          <li><a href="data_structures/index.html">Data Structures</a></li>
+          <li><a href="algorithms.html">Algorithms</a></li>
+          <li><a href="linq.html">LINQ</a></li>
+          <li><a href="projects/index.html">Projects</a></li>
+        </ul>
+      </nav>
+
+    <header class="hero">
+        <h1>Basics of C# Programming</h1>
+        <p>Learn the essentials of C# to get started with your programming journey.</p>
+    </header>
+
+    <main>
+        <!-- Introduction to C# -->
+        <section id="introduction">
+            <h2>Introduction to C#</h2>
+            <p>C# is a modern, object-oriented programming language developed by Microsoft. It is widely used for building Windows applications, web applications, and games. With C#, you can create powerful and robust programs that run on the .NET framework.</p>
+        </section>
+
+        <!-- Setting Up the Environment -->
+        <section id="setup">
+            <h2>Setting Up the Environment</h2>
+            <h3>Installing Visual Studio</h3>
+            <p>To write and run C# programs, you need to install an integrated development environment (IDE). The most popular IDE for C# is Visual Studio.</p>
+            <ul>
+                <li>Download Visual Studio from the official website.</li>
+                <li>Install it with the ".NET Desktop Development" workload.</li>
+            </ul>
+            <h3>Creating Your First Project</h3>
+            <p>Once Visual Studio is installed, follow these steps to create a new C# project:</p>
+            <ol>
+                <li>Open Visual Studio and select "Create a new project".</li>
+                <li>Select "Console App (.NET Core)" and click "Next".</li>
+                <li>Give your project a name and click "Create".</li>
+            </ol>
+        </section>
+
+        <!-- Basic Syntax and Structure -->
+        <section id="syntax">
+            <h2>Basic Syntax and Structure</h2>
+            <h3>Hello World Program</h3>
+            <p>The first program you usually write in any programming language is "Hello World". Here’s how it looks in C#:</p>
+            <pre><code class="language-csharp">
+using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, World!");
+        }
+    }
+}
+            </code></pre>
+            <p>This program outputs "Hello, World!" to the console. Let's break it down:</p>
+            <ul>
+                <li><code>using System;</code> - This statement allows you to use classes from the System namespace.</li>
+                <li><code>namespace HelloWorld</code> - Defines a namespace for your program.</li>
+                <li><code>class Program</code> - Defines a class named Program.</li>
+                <li><code>static void Main(string[] args)</code> - The entry point of the program.</li>
+                <li><code>Console.WriteLine("Hello, World!");</code> - Prints "Hello, World!" to the console.</li>
+            </ul>
+        </section>
+
+        <!-- Variables and Data Types -->
+        <section id="variables">
+            <h2>Variables and Data Types</h2>
+            <p>In C#, you can store data using variables. Here are some common data types:</p>
+            <ul>
+                <li><code>int</code> - Stores integers (whole numbers).</li>
+                <li><code>float</code> - Stores floating-point numbers.</li>
+                <li><code>double</code> - Stores double-precision floating-point numbers.</li>
+                <li><code>char</code> - Stores a single character.</li>
+                <li><code>string</code> - Stores a sequence of characters (text).</li>
+                <li><code>bool</code> - Stores a Boolean value (true or false).</li>
+            </ul>
+            <p>Example of declaring and initializing variables:</p>
+            <pre><code class="language-csharp">
+int age = 25;
+float height = 5.9f;
+double pi = 3.14159;
+char initial = 'A';
+string name = "John Doe";
+bool isStudent = true;
+            </code></pre>
+        </section>
+
+        <!-- Operators -->
+        <section id="operators">
+            <h2>Operators</h2>
+            <p>C# supports a variety of operators for performing different operations:</p>
+            <ul>
+                <li><strong>Arithmetic Operators:</strong> <code>+ - * / %</code></li>
+                <li><strong>Comparison Operators:</strong> <code>== != > < >= <=</code></li>
+                <li><strong>Logical Operators:</strong> <code>&& || !</code></li>
+            </ul>
+            <p>Example of using operators:</p>
+            <pre><code class="language-csharp">
+int a = 10;
+int b = 5;
+
+int sum = a + b;        // Addition
+int difference = a - b; // Subtraction
+int product = a * b;    // Multiplication
+int quotient = a / b;   // Division
+int remainder = a % b;  // Modulus
+
+bool isEqual = (a == b);    // Equality comparison
+bool isGreater = (a > b);   // Greater than comparison
+
+bool logicalAnd = (a > 0 && b > 0); // Logical AND
+bool logicalOr = (a > 0 || b < 0);  // Logical OR
+bool logicalNot = !(a == b);        // Logical NOT
+            </code></pre>
+        </section>
+
+        <!-- Control Structures -->
+        <section id="control-structures">
+            <h2>Control Structures</h2>
+            <h3>Conditional Statements</h3>
+            <p>Control the flow of your program using conditional statements like <code>if-else</code> and <code>switch</code>:</p>
+            <pre><code class="language-csharp">
+int number = 10;
+
+if (number > 0)
+{
+    Console.WriteLine("Positive number");
+}
+else if (number < 0)
+{
+    Console.WriteLine("Negative number");
+}
+else
+{
+    Console.WriteLine("Zero");
+}
+
+// Switch statement example
+switch (number)
+{
+    case 10:
+        Console.WriteLine("Number is ten");
+        break;
+    default:
+        Console.WriteLine("Number is not ten");
+        break;
+}
+            </code></pre>
+
+            <h3>Loops</h3>
+            <p>Use loops to repeat a block of code multiple times:</p>
+            <pre><code class="language-csharp">
+// For loop
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine(i);
+}
+
+// While loop
+int count = 0;
+while (count < 5)
+{
+    Console.WriteLine(count);
+    count++;
+}
+
+// Do-while loop
+int j = 0;
+do
+{
+    Console.WriteLine(j);
+    j++;
+} while (j < 5);
+
+// Foreach loop
+int[] numbers = { 1, 2, 3, 4, 5 };
+foreach (int num in numbers)
+{
+    Console.WriteLine(num);
+}
+            </code></pre>
+        </section>
+
+        <!-- Arrays and Collections -->
+        <section id="arrays-collections">
+            <h2>Arrays and Collections</h2>
+            <h3>Arrays</h3>
+            <p>Arrays allow you to store multiple values in a single variable:</p>
+            <pre><code class="language-csharp">
+int[] numbers = { 1, 2, 3, 4, 5 };
+Console.WriteLine(numbers[0]); // Output: 1
+            </code></pre>
+
+            <h3>Collections</h3>
+            <p>C# offers collections like Lists and Dictionaries for more complex data storage:</p>
+            <pre><code class="language-csharp">
+List<string> names = new List<string> { "Alice", "Bob", "Charlie" };
+names.Add("Diana");
+
+Dictionary<string, int> ages = new Dictionary<string, int>
+{
+    { "Alice", 25 },
+    { "Bob", 30 }
+};
+ages["Charlie"] = 35;
+            </code></pre>
+        </section>
+
+        <!-- Functions and Methods -->
+        <section id="functions-methods">
+            <h2>Functions and Methods</h2>
+            <p>Functions (or methods) in C# are blocks of code that perform a specific task:</p>
+            <pre><code class="language-csharp">
+static int Add(int x, int y)
+{
+    return x + y;
+}
+
+static void Main(string[] args)
+{
+    int result = Add(5, 3);
+    Console.WriteLine(result); // Output: 8
+}
+            </code></pre>
+            <p>Methods can have parameters and return types, and they can be overloaded:</p>
+            <pre><code class="language-csharp">
+// Overloaded methods
+static int Add(int x, int y)
+{
+    return x + y;
+}
+
+static double Add(double x, double y)
+{
+    return x + y;
+}
+            </code></pre>
+        </section>
+
+        <!-- Exception Handling -->
+        <section id="exception-handling">
+            <h2>Exception Handling</h2>
+            <p>Handle errors gracefully using <code>try-catch</code> blocks:</p>
+            <pre><code class="language-csharp">
+try
+{
+    int[] numbers = { 1, 2, 3 };
+    Console.WriteLine(numbers[5]);
+}
+catch (IndexOutOfRangeException e)
+{
+    Console.WriteLine("An error occurred: " + e.Message);
+}
+finally
+{
+    Console.WriteLine("This block is always executed.");
+}
+            </code></pre>
+        </section>
+
+        <!-- Basic Input and Output -->
+        <section id="input-output">
+            <h2>Basic Input and Output</h2>
+            <p>You can read input from the user and display output using <code>Console.ReadLine()</code> and <code>Console.WriteLine()</code>:</p>
+            <pre><code class="language-csharp">
+Console.Write("Enter your name: ");
+string name = Console.ReadLine();
+Console.WriteLine("Hello, " + name);
+            </code></pre>
+        </section>
+
+        <!-- Basic Debugging -->
+        <section id="debugging">
+            <h2>Basic Debugging</h2>
+            <p>Debugging is an essential skill. In Visual Studio, you can set breakpoints and step through your code to identify issues:</p>
+            <ul>
+                <li><strong>Breakpoints:</strong> Set a breakpoint to pause the execution at a specific line.</li>
+                <li><strong>Step Over:</strong> Execute the current line and move to the next.</li>
+                <li><strong>Step Into:</strong> Enter into a method call to see its execution.</li>
+                <li><strong>Watch Variables:</strong> Observe the values of variables as you step through the code.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TheCelestialMarauder. All rights reserved.</p>
+      </footer>
+  
+      <script>
+        document
+          .querySelector(".menu-toggle")
+          .addEventListener("click", function () {
+            document.querySelector(".navbar").classList.toggle("active");
+          });
+      </script>
+</body>
+</html>
