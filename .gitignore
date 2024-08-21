@@ -1,0 +1,88 @@
+# Ignore the bin and obj folders (common in C# projects)
+bin/
+obj/
+
+# Ignore user-specific files (Visual Studio and Rider)
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore build results
+Build/
+[Ll]og/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Aa][Dd][Bb]/
+[Aa][Dd][Bb]64/
+[Bb]uild/
+[Dd]ebugPublic/
+[Rr]eleases/
+[Oo]ut/
+
+# Ignore any *.exe, *.dll, or *.pdb files
+*.exe
+*.dll
+*.pdb
+
+# Ignore NuGet packages folder
+packages/
+*.nupkg
+*.snupkg
+
+# Ignore .NET Core files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~ 
+
+# Ignore logs and crash reports
+*.log
+*.stackdump
+*.dmp
+
+# Ignore IDE-specific folders
+.vscode/
+.idea/
+
+# Ignore Visual Studio Code workspace files
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# Ignore Visual Studio-generated index files
+*.vsidx
+
+# Ignore temporary files created by the OS or editors
+.DS_Store
+Thumbs.db
+
+# Ignore the .env file (if you use environment variables)
+.env
+
+# Ignore compiled Python files (if applicable)
+*.pyc
+__pycache__/
+
+# Ignore generated documentation (if applicable)
+doc/
+
+# Visual Studio specific items
+*.csproj        # C# project files
+*.sln           # Visual Studio solution files
+*.suo           # Solution user options files
+
+# Ignore .vs folder
+.vs/
