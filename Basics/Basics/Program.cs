@@ -4,7 +4,7 @@ namespace Basics
 {
     class BasicDataTypes
     {
-        static void main(string[] args)
+        static void Main(string[] args)
         {
             int a; // Declaration
 
