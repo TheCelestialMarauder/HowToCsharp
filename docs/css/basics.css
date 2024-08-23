@@ -26,7 +26,7 @@ body::-webkit-scrollbar-track {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
   background-color: #333;
   color: #fff;
   padding-top: 3rem;
