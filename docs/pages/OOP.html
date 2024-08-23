@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object-Oriented Programming in C#</title>
+    <link rel="stylesheet" href="../css/OOP.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        &#9776;
+      </button>
+      <ul class="navbar-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/basics.html">C# Basics</a></li>
+        <li><a href="oop.html">OOP</a></li>
+        <li><a href="../data_structures/index.html">Data Structures</a></li>
+        <li><a href="../algorithms.html">Algorithms</a></li>
+        <li><a href="../linq.html">LINQ</a></li>
+        <li><a href="../projects/index.html">Projects</a></li>
+        <li><a href="../#resources">Resources</a></li>
+      </ul>
+    </nav>
+
+    <!-- hero section -->
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Object-Oriented Programming in C#</h1>
+        <p>Master the principles of Object-Oriented Programming.</p>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main>
+      <section id="introduction">
+        <h2>Introduction to OOP</h2>
+        <p>
+          Object-Oriented Programming (OOP) is a programming paradigm based on
+          the concept of "objects", which can contain data and methods. C# is a
+          strongly object-oriented language, which means that understanding OOP
+          principles is crucial for effective C# development.
+        </p>
+      </section>
+
+      <div class="separator"></div>
+
+      <section id="principles">
+        <h2>Core Principles of OOP</h2>
+        <p>OOP in C# is built around four core principles:</p>
+        <ul>
+          <li>
+            <strong>Encapsulation:</strong> The bundling of data with the
+            methods that operate on that data.
+          </li>
+          <li>
+            <strong>Inheritance:</strong> The ability to create new classes that
+            reuse, extend, and modify the behavior of other classes.
+          </li>
+          <li>
+            <strong>Polymorphism:</strong> The ability to define a method in
+            multiple forms.
+          </li>
+          <li>
+            <strong>Abstraction:</strong> The concept of hiding the complex
+            implementation details and showing only the essential features of
+            the object.
+          </li>
+        </ul>
+      </section>
+
+      <div class="separator"></div>
+
+      <section id="classes-and-objects">
+        <h2>Classes and Objects</h2>
+        <p>
+          In C#, classes are blueprints for creating objects (instances). Here's
+          a simple example:
+        </p>
+        <pre><code>
+using System;
+
+namespace OOPExample
+{
+    class Animal
+    {
+        public string Name { get; set; }
+        public void Speak()
+        {
+            Console.WriteLine(Name + " makes a sound.");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Animal dog = new Animal();
+            dog.Name = "Dog";
+            dog.Speak();
+        }
+    }
+}
+            </code></pre>
+        <p>
+          In this example, we define a class <code>Animal</code> with a property
+          <code>Name</code> and a method <code>Speak</code>. We then create an
+          object <code>dog</code> from the <code>Animal</code> class and call
+          its <code>Speak</code> method.
+        </p>
+      </section>
+
+      <div class="separator"></div>
+
+      <section id="inheritance">
+        <h2>Inheritance</h2>
+        <p>
+          Inheritance allows you to create a new class that is based on an
+          existing class. The new class inherits fields and methods from the
+          base class. Here’s an example:
+        </p>
+        <pre><code>
+using System;
+
+namespace OOPExample
+{
+    class Animal
+    {
+        public string Name { get; set; }
+        public void Speak()
+        {
+            Console.WriteLine(Name + " makes a sound.");
+        }
+    }
+
+    class Dog : Animal
+    {
+        public void Bark()
+        {
+            Console.WriteLine(Name + " barks.");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dog dog = new Dog();
+            dog.Name = "Rover";
+            dog.Speak();
+            dog.Bark();
+        }
+    }
+}
+            </code></pre>
+        <p>
+          Here, the <code>Dog</code> class inherits from the
+          <code>Animal</code> class and adds a new method <code>Bark</code>.
+        </p>
+      </section>
+
+      <div class="separator"></div>
+
+      <section id="polymorphism">
+        <h2>Polymorphism</h2>
+        <p>
+          Polymorphism allows methods to do different things based on the object
+          it is acting upon. It is commonly used with inheritance. Here's an
+          example:
+        </p>
+        <pre><code>
+using System;
+
+namespace OOPExample
+{
+    class Animal
+    {
+        public virtual void Speak()
+        {
+            Console.WriteLine("Animal makes a sound.");
+        }
+    }
+
+    class Dog : Animal
+    {
+        public override void Speak()
+        {
+            Console.WriteLine("Dog barks.");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Animal myAnimal = new Animal();
+            Animal myDog = new Dog();
+
+            myAnimal.Speak();  // Outputs: Animal makes a sound.
+            myDog.Speak();     // Outputs: Dog barks.
+        }
+    }
+}
+            </code></pre>
+        <p>
+          In this example, the <code>Speak</code> method is overridden in the
+          <code>Dog</code> class, and when called, it behaves differently
+          depending on whether it’s called on an <code>Animal</code> object or a
+          <code>Dog</code> object.
+        </p>
+      </section>
+
+      <div class="separator"></div>
+
+      <section id="abstraction">
+        <h2>Abstraction</h2>
+        <p>
+          Abstraction allows you to focus on what the object does instead of how
+          it does it. Abstract classes and interfaces are used to achieve
+          abstraction in C#. Here’s a simple example using an abstract class:
+        </p>
+        <pre><code>
+using System;
+
+namespace OOPExample
+{
+    abstract class Animal
+    {
+        public abstract void Speak();
+    }
+
+    class Dog : Animal
+    {
+        public override void Speak()
+        {
+            Console.WriteLine("Dog barks.");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Animal myDog = new Dog();
+            myDog.Speak();  // Outputs: Dog barks.
+        }
+    }
+}
+            </code></pre>
+        <p>
+          In this example, the <code>Animal</code> class is abstract, meaning it
+          cannot be instantiated on its own. The <code>Dog</code> class
+          implements the abstract <code>Speak</code> method.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 TheCelestialMarauder. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".navbar").classList.toggle("active");
+        });
+    </script>
+  </body>
+</html>
