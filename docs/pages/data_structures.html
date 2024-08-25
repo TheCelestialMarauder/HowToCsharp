@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Data Structures and Algorithms</title>
+        <link rel="stylesheet" href="../css/data_strucutres.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="../path-to-your-logo.png" alt="Logo" class="logo" />
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="basics.html">C# Basics</a></li>
+                <li><a href="OOP.html">OOP</a></li>
+                <li><a href="#">LINQ</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>Data Structures and Algorithms</h1>
+            <p>
+                Understanding data structures and algorithms is essential for writing
+                efficient and optimized code. This section will cover some of the most
+                important data structures and algorithms in C#.
+            </p>
+
+            <h2>Data Structures</h2>
+            <ul>
+                <li>
+                    <strong>Arrays:</strong> Fixed-size data structure that stores
+                    elements of the same data type. They are indexed and allow for
+                    constant-time access to elements.
+                    <pre>
+                        <code class="language-csharp">
+                            int[] numbers = new int[5] {1, 2, 3, 4, 5};
+                            int firstNumber = numbers[0]; // Accessing the first element
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <strong>Lists:</strong> Dynamic-sized collection that can grow or
+                    shrink. Lists allow for easier manipulation of elements compared to
+                    arrays.
+                    <pre>
+                        <code class="language-csharp">
+                            List<int> numbers = new List<int> {1, 2, 3, 4, 5};
+                            numbers.Add(6); // Adding an element
+                            numbers.Remove(3); // Removing an element
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <strong>Stacks:</strong> Last-In-First-Out (LIFO) data structure.
+                    Elements are added and removed from the top of the stack.
+                    <pre>
+                        <code class="language-csharp">
+                            Stack<int> stack = new Stack<int>();
+                            stack.Push(1); // Adding an element
+                            stack.Push(2);
+                            int top = stack.Pop(); // Removing the top element
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <strong>Queues:</strong> First-In-First-Out (FIFO) data structure.
+                    Elements are added at the back and removed from the front.
+                    <pre>
+                        <code class="language-csharp">
+                            Queue<int> queue = new Queue<int>();
+                            queue.Enqueue(1); // Adding an element
+                            queue.Enqueue(2);
+                            int front = queue.Dequeue(); // Removing the front element
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <strong>Dictionaries:</strong> Collection of key-value pairs that
+                    allows for fast lookups, insertions, and deletions.
+                    <pre>
+                        <code class="language-csharp">
+                            Dictionary<string, int> ages = new Dictionary<string, int>();
+                            ages["Alice"] = 25;
+                            ages["Bob"] = 30;
+                            int aliceAge = ages["Alice"]; // Accessing a value by key
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <strong>Trees:</strong> Hierarchical data structure with nodes that
+                    have a parent-child relationship. Common types include binary trees
+                    and binary search trees.
+                    <pre>
+                        <code class="language-csharp">
+                            class TreeNode
+                            {
+                                public int Value;
+                                public TreeNode Left;
+                                public TreeNode Right;
+                            
+                                public TreeNode(int value)
+                                {
+                                    Value = value;
+                                    Left = null;
+                                    Right = null;
+                                }
+                            }
+                            
+                            TreeNode root = new TreeNode(1);
+                            root.Left = new TreeNode(2);
+                            root.Right = new TreeNode(3);
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <strong>Graphs:</strong> Data structure that consists of nodes
+                    (vertices) and edges that connect them. Graphs can be used to
+                    represent networks, such as social networks or communication networks.
+                    <pre><code class="language-csharp">
+                            class Graph
+                            {
+                                private int vertices;
+                                private List<int>[] adjList;
+                            
+                                public Graph(int vertices)
+                                {
+                                    this.vertices = vertices;
+                                    adjList = new List<int>[vertices];
+                            
+                                    for (int i = 0; i < vertices; i++)
+                                        adjList[i] = new List<int>();
+                                }
+                            
+                                public void AddEdge(int src, int dest)
+                                {
+                                    adjList[src].Add(dest);
+                                }
+                            }
+                            
+                            Graph graph = new Graph(5);
+                            graph.AddEdge(0, 1);
+                            graph.AddEdge(0, 4);
+                            graph.AddEdge(1, 2);
+                    </code></pre>
+                </li>
+            </ul>
+
+            <h2>Algorithms</h2>
+            <ul>
+                <li>
+                    <strong>Sorting Algorithms:</strong> Algorithms like Bubble Sort,
+                    Merge Sort, and Quick Sort, which are used to arrange data in a
+                    specific order.
+                </li>
+                <li>
+                    <strong>Search Algorithms:</strong> Algorithms such as Binary Search
+                    and Linear Search, which are used to find an element in a data
+                    structure.
+                </li>
+                <li>
+                    <strong>Recursion:</strong> A method of solving a problem where a
+                    function calls itself as a subroutine. It's used in algorithms like
+                    the calculation of factorials and the Fibonacci sequence.
+                </li>
+                <li>
+                    <strong>Dynamic Programming:</strong> Optimization technique used to
+                    solve problems by breaking them down into simpler subproblems. It's
+                    used in algorithms like the Knapsack problem.
+                </li>
+                <li>
+                    <strong>Greedy Algorithms:</strong> Algorithms that make the locally
+                    optimal choice at each stage, with the hope of finding a global
+                    optimum. An example is the coin change problem.
+                </li>
+                <li>
+                    <strong>Graph Algorithms:</strong> Algorithms like Depth-First Search
+                    (DFS), Breadth-First Search (BFS), and Dijkstra's algorithm, which are
+                    used to traverse and find the shortest path in graphs.
+                </li>
+            </ul>
+
+            <div class="separator"></div>
+
+            <h2>Practice Problems</h2>
+            <p>
+                Below are some practice problems that you can try to reinforce your
+                understanding of data structures and algorithms:
+            </p>
+            <ul>
+                <li>
+                    <a href="https://leetcode.com/problems/two-sum/" target="_blank">
+                        Two Sum
+                    </a>
+                    (Array)
+                </li>
+                <li>
+                    <a href="https://leetcode.com/problems/valid-parentheses/" target="_blank">
+                        Valid Parentheses
+                    </a>
+                    (Stack)
+                </li>
+                <li>
+                    <a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank">
+                        Merge Two Sorted Lists
+                    </a>
+                    (Linked List)
+                </li>
+                <li>
+                    <a href="https://leetcode.com/problems/binary-tree-inorder-traversal/" target="_blank">
+                        Binary Tree Inorder Traversal
+                    </a>
+                    (Tree)
+                </li>
+                <li>
+                    <a href="https://leetcode.com/problems/graph-valid-tree/" target="_blank">
+                        Graph Valid Tree
+                    </a>
+                    (Graph)
+                </li>
+                <li>
+                    <a href="https://leetcode.com/problems/maximum-subarray/" target="_blank">
+                        Maximum Subarray
+                    </a>
+                    (Dynamic Programming)
+                </li>
+                <li>
+                    <a href="https://leetcode.com/problems/coin-change/" target="_blank">
+                        Coin Change
+                    </a>
+                    (Greedy Algorithm)
+                </li>
+            </ul>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 TheCelestialMarauder. All rights reserved.</p>
+        </footer>
+
+        <script>
+            document
+                .querySelector(".menu-toggle")
+                .addEventListener("click", function () {
+                document.querySelector(".navbar").classList.toggle("active");
+            });
+        </script>
+    </body>
+</html>
